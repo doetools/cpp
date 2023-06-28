@@ -24,17 +24,6 @@ void add(const T &...x)
         cout << i << endl;
 }
 
-void iterate_though_ii()
-{
-    auto a = {101, 201, 301, 401};
-
-    for (auto i : a)
-        cout << i << endl;
-
-    for (auto i = a.begin(); i < a.end(); i++)
-        cout << *i << endl;
-}
-
 int main()
 {
 
@@ -43,7 +32,4 @@ int main()
     print(v2, v1, v2, v1);
 
     add(1, 2, 3, 4);
-
-    // we can simply loop through an initializer list
-    iterate_though_ii();
 }

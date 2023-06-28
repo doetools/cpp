@@ -448,3 +448,16 @@ for (auto & i : {1,2,4})
     cout <<i <<endl;
 
 ```
+
+19. `__call__` alike function for C++ that can be called without have to `.fn()`.
+
+```cpp
+template <typename T>
+class Foo{
+    public:
+        T fn(int x);
+        T ()(int x){
+            fn(x)
+        };
+}
+```
