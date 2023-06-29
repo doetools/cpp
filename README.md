@@ -461,3 +461,48 @@ class Foo{
         };
 }
 ```
+
+20. `Functor`, what a fucky name! It stands for Function Object. It is an object (of course instantiated from a class) that performs an operation. Compared to a straight function, it has two advantages. First, it allows for storing state. Second, it can be used for template parameter.
+
+```cpp
+
+class Predicate{
+    public:
+
+        int a = 0;
+
+        int operator()(int a, int b){
+            return a < b;
+        }
+};
+```
+
+21. STL -- standard template library, has a collection of containers and algorithms. This [page](https://www.geeksforgeeks.org/the-c-standard-template-library-stl/) has a good introduction.
+
+22. `Iterator`, like the function of `pointer`, is an object used to traverse a container. Check out this page for [introduction](https://www.geeksforgeeks.org/introduction-iterators-c/). Here are some operations (overloaded, of course):
+
+```cpp
+
+#include <iterator>
+
+using namespace std;
+
+
+vector<int>::iterator i, j;
+
+// access
+i->someobject
+
+// read
+<-*i
+
+// write
+*i = ...
+
+// increment
+++i;
+--i;
+
+//compare
+i==j;
+```
